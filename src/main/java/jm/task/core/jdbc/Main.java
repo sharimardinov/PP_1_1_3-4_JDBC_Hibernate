@@ -21,7 +21,7 @@ public class Main {
         System.out.println("User с именем — Мария добавлен в базу данных");
 
         List<User> users = userService.getAllUsers();
-        System.out.println(users.toString());
+        System.out.println(users);
 
         userService.cleanUsersTable();
 
