@@ -27,18 +27,9 @@ public class Util {
             try {
                 Configuration configuration = new Configuration();
                 Properties settings = new Properties();
-                settings.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-                settings.put(Environment.URL, "jdbc:mysql://localhost:3306/dbforpp?useSSL=false");
-                settings.put(Environment.USER, "root");
-                settings.put(Environment.PASS, "82EsBZEc181");
-                settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
-
-                settings.put(Environment.SHOW_SQL, "true");
-
-                settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
-
-                settings.put(Environment.HBM2DDL_AUTO, "");
-
+                settings.put(Environment.URL, DB_URL);
+                settings.put(Environment.USER, DB_USERNAME);
+                settings.put(Environment.PASS, DB_PASSWORD);
                 configuration.setProperties(settings);
 
                 configuration.addAnnotatedClass(User.class);
